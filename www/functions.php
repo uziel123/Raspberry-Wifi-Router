@@ -193,8 +193,8 @@
 			array_push($interfaces,"iface lo inet loopback\n\n");
 
 		  //push the settings for the eth0 adapter up the array
-			array_push($interfaces,"iface eth0 inet manual\n");
-			array_push($interfaces,"iface wlan0 inet manual\n");
+			array_push($interfaces,"iface eth0 inet dhcp\n");
+			array_push($interfaces,"iface wlan0 inet dhcp\n");
 			array_push($interfaces,"wpa-conf /etc/wpa_supplicant/wpa_supplicant.conf\n");
 			  
 		  
@@ -251,7 +251,7 @@
 		  }
 		  
 		  //set eth0 as only allowed interface for addressing by dhcpcd
-			array_push($dhcpcd,"allowinterfaces eth0\n\n");
+			array_push($dhcpcd,"allowinterfaces eth0 wlan0\n\n");
 			
 		  //set static dns entries if in dhcp mode and dns override enabled
 			if (strcmp($configurationsettings['lantype'],"dhcp") == 0 && strcmp($configurationsettings['dhcpdnsoverride'],"enabled") == 0) {
