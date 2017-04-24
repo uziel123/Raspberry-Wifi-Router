@@ -189,7 +189,7 @@
 		  //operationmode Router - prepare interfaces file contents
 		  
 		  //push the settings for the loopback adapter up the array
-			array_push($interfaces,"auto lo\n");
+			array_push($interfaces,"auto lo eth0 wlan0\n");
 			array_push($interfaces,"iface lo inet loopback\n\n");
 
 		  //push the settings for the eth0 adapter up the array
