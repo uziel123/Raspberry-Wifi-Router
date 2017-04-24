@@ -193,8 +193,8 @@
 			array_push($interfaces,"iface lo inet loopback\n\n");
 
 		  //push the settings for the eth0 adapter up the array
-			array_push($interfaces,"iface eth0 inet dhcp\n");
-			array_push($interfaces,"iface wlan0 inet dhcp\n");
+			array_push($interfaces,"iface eth0 inet manual\n");
+			array_push($interfaces,"iface wlan0 inet manual\n");
 			array_push($interfaces,"wpa-conf /etc/wpa_supplicant/wpa_supplicant.conf\n");
 			  
 		  
