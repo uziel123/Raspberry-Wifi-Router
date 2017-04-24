@@ -1,6 +1,6 @@
 <?php session_start();// Starting Session
 // Establishing Connection with Server by passing server_name, user_id and password as a parameter
-$connection = mysql_connect("localhost", "root", "raspberry");
+$connection = mysql_connect("localhost", "root", "@casi123");
 // Selecting Database
 $db = mysql_select_db("login", $connection);
 // Storing Session
