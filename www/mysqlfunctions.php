@@ -4,7 +4,7 @@
 function select($sql,$mysqldbname) {
 	  $mysqlservername = "localhost";
 	  $mysqlusername = "root";
-	  $mysqlpassword = "raspberry";
+	  $mysqlpassword = "@casi123";
 	  $mysqlconn = mysqli_connect($mysqlservername, $mysqlusername, $mysqlpassword, $mysqldbname);
 	  if (!$mysqlconn) {
 		die("mysqlconnection failed: " . mysqli_connect_error());
@@ -18,7 +18,7 @@ return $result;
 function insert($sql,$mysqldbname) {
 	  $mysqlservername = "localhost";
 	  $mysqlusername = "root";
-	  $mysqlpassword = "raspberry";
+	  $mysqlpassword = "@casi123";
 	  $mysqlconn = mysqli_connect($mysqlservername, $mysqlusername, $mysqlpassword, $mysqldbname);
 	  if (!$mysqlconn) {
 		die("mysqlconnection failed: " . mysqli_connect_error());
@@ -35,7 +35,7 @@ function insert($sql,$mysqldbname) {
 function delete($sql,$mysqldbname) {
 	  $mysqlservername = "localhost";
 	  $mysqlusername = "root";
-	  $mysqlpassword = "raspberry";
+	  $mysqlpassword = "@casi123";
 	  $mysqlconn = mysqli_connect($mysqlservername, $mysqlusername, $mysqlpassword, $mysqldbname);
 	  if (!$mysqlconn) {
 		die("mysqlconnection failed: " . mysqli_connect_error());
