@@ -166,7 +166,7 @@ sudo apt-get -y install freeradius freeradius-mysql
 echo 'create database radius;' | mysql --host=localhost --user=root --password=@casi123
 sudo cat /etc/freeradius/sql/mysql/schema.sql | mysql --host=localhost --user=root --password=@casi123 radius
 sudo cat /etc/freeradius/sql/mysql/admin.sql | mysql --host=localhost --user=root --password=@casi123 radius
-echo "insert into radcheck (username, attribute, op, value) values ('user', 'Cleartext-Password', ':=', 'password');" | mysql --host=localhost --user=root --password=raspberry radius
+echo "insert into radcheck (username, attribute, op, value) values ('user', 'Cleartext-Password', ':=', 'password');" | mysql --host=localhost --user=root --password=@casi123 radius
 sudo sed -i 's/#[[:space:]]$INCLUDE sql.conf/$INCLUDE sql.conf/g' /etc/freeradius/radiusd.conf
 sudo cp /home/pi/Raspberry-Wifi-Router/defconfig/sites-available-default /etc/freeradius/sites-available/default
 sudo systemctl restart freeradius.service
