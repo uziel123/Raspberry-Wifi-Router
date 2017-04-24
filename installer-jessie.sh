@@ -37,7 +37,7 @@ sudo reboot
 ########################################################################################
 # Install git and clone our repository
 sudo apt-get -y install git-core
-git clone https://github.com/ronnyvdbr/Raspberry-Wifi-Router.git /home/pi/Raspberry-Wifi-Router
+git clone https://github.com/uziel123/Raspberry-Wifi-Router.git /home/pi/Raspberry-Wifi-Router
 
 ########################################################################################
 # Set-up nginx with php support and enable our Raspberry-Wifi-Router website.
